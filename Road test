@@ -1,0 +1,21 @@
+#include <PRIZM.h>      
+PRIZM prizm;
+
+void setup() {
+   prizm.PrizmBegin();
+   //Pg165
+   prizm.setMotorInvert(2,1);
+}
+void loop() { 
+   //Drive forward 1m  Pg 164
+   prizm.setMotorSpeeds(360,360);
+   delay(1000);
+   //Stop and turn right
+   prizm.setMotorSpeeds(-360,360);
+   delay(1000);
+   //Go forward slow
+   prizm.setMotorSpeeds(-180,180);
+   
+   //Stop and turn left
+   //Go Forward Slow and Stop
+} 
