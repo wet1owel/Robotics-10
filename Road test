@@ -5,6 +5,7 @@ void setup() {
    prizm.PrizmBegin();
    //Pg165
    prizm.setMotorInvert(2,1);
+     prizm.setServoPosition(2,0);
 }
 void loop() { 
    //Drive forward 1m  Pg 164
@@ -20,6 +21,7 @@ void loop() {
    delay(1000);
    prizm.setMotorSpeeds(180,180);
    delay(4500);
+   prizm.setServoPosition(2,180);
    prizm.setMotorSpeeds(0,0);
    prizm.PrizmEnd();
 }
