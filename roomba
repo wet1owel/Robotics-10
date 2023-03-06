@@ -1,1 +1,18 @@
+#include <PRIZM.h>      
+PRIZM prizm;
 
+void setup() {
+   prizm.PrizmBegin();
+   //Pg165
+   prizm.setMotorInvert(2,1);
+     prizm.setServoPosition(2,0);
+}
+void loop() { 
+   if (prizm.readSonicSensorCM(4)>=100){
+      prizm.setMotorSpeeds(360,360);
+   }
+   if (prizm.readSonicSensorCM(4)<100){
+      
+      prizm.setMotorSpeeds(0,0);
+   }
+}
